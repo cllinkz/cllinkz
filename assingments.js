@@ -102,3 +102,14 @@
 // console.log(
 //   `The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`
 // );
+
+// CODING CHALLENGE #2
+
+// const bills = [125, 555, 44];
+
+function calcTip(value) {
+  if (value >= 50 && value <= 300) return value * 0.15;
+}
+
+const bill = calcTip(100);
+console.log(bill);

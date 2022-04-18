@@ -368,3 +368,78 @@ const hasGoodVision = true; //B
 // // Use it in a template literal
 // console.log(`I like to drink ${age >= 18 ? "wine" : "water"}`);
 // //  The conditional (ternary) operator for short if else statements, usually when there is a bigger if/else code we still use the if/else.
+
+// ARRAYS
+
+// Without arrays
+// const friend1 = "Michael";
+// const friend2 = "Steven";
+// const friend3 = "Peter";
+
+// // Data structures - array
+// // Strings
+// const friends = ["Michael", "Steven", "Peter"];
+// console.log(friends);
+// // Numbers
+// const y = new Array(1991, 1984, 2008, 2020);
+
+// // How to target elements in the array
+// console.log(friends[2], y[0]);
+// console.log(friends.length);
+// // How to target the last element in the array.
+// console.log(friends[friends.length - 1]);
+
+// // How to change the array
+// friends[2] = "Jay";
+// console.log(friends);
+
+// // An array can hold values od different types
+// const firstName = "Jonas";
+// const jonas = [firstName, "Schmedtmann", 2037 - 1991, "teacher", friends];
+// console.log(jonas);
+
+// // Exercise
+// const calcAge = function (birthYear) {
+//   return 2037 - birthYear;
+// };
+
+// const years = [1990, 1967, 2002, 2010, 2018];
+
+// const age1 = calcAge(years[0]);
+// const age2 = calcAge(years[1]);
+// const age3 = calcAge(years[years.length - 1]);
+// console.log(age1, age2, age3);
+
+// const ages = [calcAge(years[0]), calcAge(years[1])];
+// console.log(ages);
+
+// Array Methods - basic
+// push is a method(function) to add 1 more element at the end of the array
+// const friends = ["Michael", "Steven", "Peter"];
+// friends.push("Jay");
+// console.log(friends);
+
+// // unshift is a method(function) to add 1 more element at the begining of the array
+// friends.unshift("John");
+// console.log(friends);
+
+// // pop is a method(function) to remove the last element from the array
+// friends.pop();
+// console.log(friends);
+
+// // shift is a method(function) to remove the first element from the array
+// friends.shift();
+// console.log(friends);
+
+// // index of is a method(function) to get the element position in the array
+// console.log(friends.indexOf("Steven"));
+
+// // includes will turn true or false if the element is inside of the array
+// console.log(friends.includes("Steven"));
+// friends.push(23);
+// console.log(friends.includes(23));
+
+// // Most used case of the includes case
+// if (friends.includes("Steven")) {
+//   console.log(`You have a friend called Steven`);
+// }
