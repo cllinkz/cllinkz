@@ -1,4 +1,4 @@
-- 👋 Hi, I’m @cllinkz
+- 👋 Hi, I’m @darkoilievski
 - 👀 I’m interested in front end development.
 - 🌱 I’m currently learning HTML and CSS, JavaScript and React.
 - 💞️ I’m looking to collaborate on ...
