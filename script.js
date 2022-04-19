@@ -259,8 +259,8 @@ console.log(BMIMark, BMIJohn, markHigherBMI);
 
 // BOOLEAN LOGIC USED FOR ALL PROGRAMING LANGUAGES
 
-const hasDriversLicense = true; //A
-const hasGoodVision = true; //B
+// const hasDriversLicense = true; //A
+// const hasGoodVision = true; //B
 
 // // This is the AND logical operator and its defind with &&;
 // console.log(hasDriversLicense && hasGoodVision);
@@ -369,7 +369,120 @@ const hasGoodVision = true; //B
 // console.log(`I like to drink ${age >= 18 ? "wine" : "water"}`);
 // //  The conditional (ternary) operator for short if else statements, usually when there is a bigger if/else code we still use the if/else.
 
-// ARRAYS
+// FUNDAMENTALS PART 2
+
+// Strict mode, use the line below at the begining of your code to activate strict mode
+//  Strict mode is used to write easeier code and avoid some bugs
+
+"use strict";
+
+// let hasDriversLicense = false;
+// const passTest = true;
+
+// if (passTest) hasDriversLicense = true;
+// if (hasDriversLicense) console.log(`I can drive`);
+
+// Strict mode reserves the words below like interface/private/if and wont let us access our code on the web
+// const interface = "Audio";
+// const private = 534;
+// const if = 23;
+
+// FUNCTIONS
+
+// function logger() {
+//   console.log(`My name is Jonas`);
+// }
+
+// // Calling running or invoking the fuction
+// logger();
+// logger();
+// logger();
+
+// function fruitProcessor(apples, oranges) {
+//   const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
+//   return juice;
+// }
+// const appleJuice = fruitProcessor(5, 0);
+// console.log(appleJuice);
+
+// const appleOrange = fruitProcessor(2, 4);
+// console.log(appleOrange);
+
+// // Function decalrations
+
+// function calcAge1(birthYear) {
+//   return 2037 - birthYear;
+// }
+
+// const age1 = calcAge1(1990);
+// console.log(age1);
+
+// // Function expression
+
+// const calcAge2 = function (birthYear) {
+//   return 2037 - birthYear;
+// };
+
+// const age2 = calcAge2(1990);
+// console.log(age2);
+
+// My preference is to use function expressions.
+
+// Arrow Function
+
+// const calcAge3 = (birthYear) => 2037 - birthYear;
+// const age3 = calcAge3(1990);
+// console.log(age3);
+
+// const yearsUntilRetirement = (birthYear, firstName) => {
+//   const age = 2022 - birthYear;
+//   const retirement = 64 - age;
+//   // return retirement;
+//   return `${firstName} retires in ${retirement} years`;
+// };
+
+// console.log(yearsUntilRetirement(1990, "Darko"));
+// console.log(yearsUntilRetirement(1991, "Tanja"));
+
+// Functions calling other fuctions
+
+// function cutFruitPieces(fruit) {
+//   return fruit * 4;
+// }
+
+// function fruitProcessor(apples, oranges) {
+//   const applePieces = cutFruitPieces(apples);
+//   const orangePieces = cutFruitPieces(oranges);
+
+//   const juice = `Juice with ${applePieces} pieces of apples and ${orangePieces} pieces of oranges.`;
+//   return juice;
+// }
+
+// console.log(fruitProcessor(2, 3));
+
+// Reviewing functions
+
+// const calcAge = function (birthYear) {
+//   return 2037 - birthYear;
+// };
+
+// const yearsUntilRetirement = function (birthYear, firstName) {
+//   const age = calcAge(birthYear);
+//   const retirement = 64 - age;
+
+//   if (retirement > 0) {
+//     console.log(`${firstName} retires in ${retirement} years`);
+//     return retirement;
+//   } else {
+//     console.log(`${firstName} has already retired`);
+//     return -1;
+//   }
+// };
+
+// console.log(yearsUntilRetirement(1991, "Darko"));
+// console.log(yearsUntilRetirement(1969, "Ana"));
+
+//  ARRAYS
 
 // Without arrays
 // const friend1 = "Michael";
@@ -576,3 +689,150 @@ const hasGoodVision = true; //B
 // };
 
 // console.log(jonas.checkLicense());
+
+// Loops
+// They allow us to automate repetitive tasks
+
+// Without loops we would have to manually write our code
+// console.log(`Lifting weights repetition 1`);
+// console.log(`Lifting weights repetition 2`);
+// console.log(`Lifting weights repetition 3`);
+// console.log(`Lifting weights repetition 4`);
+// console.log(`Lifting weights repetition 5`);
+
+// For loop -  it keeps runing while condition is TRUE
+
+// for (let repetition = 1; repetition <= 10; repetition++) {
+//   console.log(`Lifting weights repetition ${repetition}`);
+// }
+
+// for (let tanja = 1; tanja <= 10; tanja++) {
+//   console.log(`Tanja go saka darko sekoj den ${tanja}`);
+// }
+
+// Looping arrays
+// const jonas = [
+//   "Darko",
+//   "Ilievski",
+//   2022 - 1990,
+//   "teacher",
+//   ["Meco", "borche", "Koki", "kocule"],
+//   "Tanja",
+//   "matea",
+//   "zelka",
+//   true,
+// ];
+
+// The array start from 0 because is 0 based,
+/*
+for (let i = 0; i < 5; i++) instead of manually writing the length 
+we simpy define it with < (value).lenght
+*/
+// for (let i = 0; i < jonas.length; i++) {
+//   console.log(jonas[i], typeof jonas[i]);
+// }
+
+// Create an array with the types of elements
+// Filling an array
+// const jonas = [
+//   "Darko",
+//   "Ilievski",
+//   2022 - 1990,
+//   "teacher",
+//   ["Meco", "borche", "Koki", "kocule"],
+//   "Tanja",
+//   "matea",
+//   "zelka",
+//   true,
+// ];
+
+// const types = [];
+
+// for (let i = 0; i < jonas.length; i++) {
+//   console.log(jonas[i], typeof jonas[i]);
+//   // types[i] = typeof jonas[i]; ONE WAY OF DOING IT
+//   types.push(typeof jonas[i]); // The other way of doing the same thing
+// }
+
+// console.log(types);
+
+// PRACTICE
+
+// const birthYear = [1991, 2007, 1969, 2020];
+// const ages = [];
+// for (let i = 0; i < birthYear.length; i++) {
+//   ages.push(2037 - birthYear[i]);
+// }
+
+// console.log(ages);
+
+// Continue statement
+
+// const jonas = [
+//   "Darko",
+//   "Ilievski",
+//   2022 - 1990,
+//   "teacher",
+//   ["Meco", "borche", "Koki", "kocule"],
+//   "Tanja",
+//   "matea",
+//   "zelka",
+//   true,
+// ];
+
+// // for (let i = 0; i < jonas.length; i++) {
+// //   if (typeof jonas[i] !== "string") continue; // it only prints the strings in the array
+// //   console.log(jonas[i], typeof jonas[i]);
+// // }
+
+// // Break statement - it breaks the loop when we find the value we need
+
+// for (let i = 0; i < jonas.length; i++) {
+//   if (typeof jonas[i] === "number") break; // it breaks the loop when it gets to the number (it doesnt eve show the number)
+//   console.log(jonas[i], typeof jonas[i]);
+// }
+
+// Looping backwards
+
+// const jonas = [
+//   "Darko",
+//   "Ilievski",
+//   2022 - 1990,
+//   "teacher",
+//   ["Meco", "borche", "Koki", "kocule"],
+//   true,
+// ];
+
+// for (let i = jonas.length - 1; i >= 0; i--) {
+//   console.log(i, jonas[i]);
+// }
+
+// Loop inside of a loop
+
+// for (let exercise = 1; exercise <= 3; exercise++) {
+//   console.log(`--------------------Starting exercise ${exercise}`);
+//   // How to make a loop inside a loop
+//   for (let rep = 1; rep <= 5; rep++) {
+//     console.log(`Excerise ${exercise}: Lifitng weight repetition ${rep}`);
+//   }
+// }
+
+// THE WHILE LOOP
+
+//  This is the same as a loop but it is written different
+// let repetition = 1;
+// while (repetition <= 10) {
+//   console.log(`Lifting weights repetition ${repetition}`);
+//   repetition++;
+// }
+
+// Rolling dice, when the dice rolls 6 the loop will stop
+// Be carefull not to make an infinte loops
+// let dice = Math.trunc(Math.random() * 6) + 1;
+// console.log(dice);
+
+// while (dice !== 6) {
+//   console.log(`You rolled a ${dice}`);
+//   dice = Math.trunc(Math.random() * 6);
+//   if (dice === 6) console.log(`Loop is about to end ...`);
+// }
