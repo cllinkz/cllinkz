@@ -443,3 +443,136 @@ const hasGoodVision = true; //B
 // if (friends.includes("Steven")) {
 //   console.log(`You have a friend called Steven`);
 // }
+
+// OBJECTS
+// We write objects with curly braces {} is the easiest way and its called the literal syntax
+// The difference between obejcts and arrays is the order of the content,
+// The orded of the content doesnt matter in the objects like it does in the array[0,1,2]
+
+// const jonas = {
+//   firstName: "Darko",
+//   lastName: "Ilievski",
+//   age: 2037 - 1990,
+//   job: "teacher",
+//   friends: ["Meco", "borche", "Koki", "kocule"],
+// };
+// console.log(jonas);
+
+// DOT vs Bracket NOtation
+
+// DOT notation
+// const jonas = {
+//   firstName: "Darko",
+//   lastName: "Ilievski",
+//   age: 2037 - 1990,
+//   job: "teacher",
+//   friends: ["Meco", "borche", "Koki", "kocule"],
+// };
+// console.log(jonas.lastName);
+
+// Brackets notation
+// const jonas = {
+//   firstName: "Darko",
+//   lastName: "Ilievski",
+//   age: 2037 - 1990,
+//   job: "teacher",
+//   friends: ["Meco", "borche", "Koki", "kocule"],
+// };
+// console.log(jonas["lastName"]);
+
+// // The difference is in the brackets notation we can put any expression in the []
+
+// const nameKey = "Name";
+// console.log(jonas["first" + nameKey]);
+// console.log(jonas["last" + nameKey]);
+
+// // Usually used feature for a popup window
+// const interestedIn = prompt(
+//   `What do you want to know about Darko? Choose between fisrtName, lastName, age, job and friends`
+// );
+// console.log(jonas[interestedIn]);
+
+// if (jonas[interestedIn]) {
+//   console.log(jonas[interestedIn]);
+// } else {
+//   console.log(
+//     `Wrong request. Choose between fisrtName, lastName, age, job and friends`
+//   );
+// }
+// // When do we use DOT and when Brackets
+// //DOT is easier for use and i should use it more often
+// // Bracket notation is used usually when there is some compute to be executed for example 2+2 etc.
+
+// // How to add new properties to the object
+// jonas.location = "Skopje";
+// jonas["twitter"] = "@jonas";
+// console.log(jonas);
+
+// Practice
+
+// const jonas = {
+//   firstName: "Jonas",
+//   friendName: ["Michael", "peter", "Seven"],
+// };
+
+// console.log(
+//   `${jonas.firstName} has ${jonas.friendName.length} friends, and his best friend is ${jonas.friendName[0]}`
+// );
+
+// OBJECT METHODS
+
+// How to add functions in objects
+// const jonas = {
+//   firstName: "Darko",
+//   lastName: "Ilievski",
+//   birthYear: 1991,
+//   job: "teacher",
+//   friends: ["Meco", "borche", "Koki", "kocule"],
+//   hasDriversLicense: true,
+// Adding a function (function expression) it's only allowed to use expression in the objects
+// // calcAge: function (birthYear) {
+// //   return 2037 - birthYear;
+// },
+
+// Adding the this keyword because we have the birthYear defined in the object
+// It is the best use to use this. and the value so we dont repeat ourselves
+// calcAge: function () {
+//   return 2037 - this.birthYear;
+// },
+
+// If we need the result few times after in the later code it is usually
+//  a good practice to store it in a new parameter
+
+// calcAge: function () {
+//   this.age = 2037 - this.birthYear;
+//   return this.age;
+// },
+
+// console.log(jonas.calcAge());
+// console.log(jonas.age);
+// console.log(jonas.age);
+// console.log(jonas.age);
+
+// The same using bracket notation
+// console.log(jonas["calcAge"]());
+
+// Practice methods
+// const jonas = {
+//   firstName: "Darko",
+//   lastName: "Ilievski",
+//   birthYear: 1991,
+//   job: "teacher",
+//   friends: ["Meco", "borche", "Koki", "kocule"],
+//   hasDriversLicense: true,
+//   calcAge: function () {
+//     this.age = 2037 - this.birthYear;
+//     return this.age;
+//   },
+//   checkLicense: function () {
+//     return `${jonas.firstName} is a ${jonas.calcAge()} old ${
+//       jonas.job
+//     }, and he has ${jonas.hasDriversLicense ? "a" : "no"} driver's license`;
+//   },
+// };
+
+// console.log(jonas.checkLicense());
